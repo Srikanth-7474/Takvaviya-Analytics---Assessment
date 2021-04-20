@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f840975e7f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="p-5">
+        <h1 class="text-center heading">Theme of UI</h1>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary m-3" id="summaryBtn">Cick here to view summary</button>
+            <button class="btn btn-primary m-3" id="graphBtn">Click here to view Analytical Maps</button>
+        </div>
+    </div>
+    <div class="d-none graphs-bg-container m-auto p-3 " id="summaryContainer">
+        <div class=" summary-continer m-auto shadow p-3">
+            <div>
+                <div class="d-flex justify-content-between">
+                    <h1 class="summary-group ml-4"> Hotspots</h1>
+                    <h1 class="summary-group  count"><span><i class="mr-3 fas fa-adjust"></i></span> 5279</h1>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group count"><span><i class=" mr-3 fas fa-info-circle"></i> </span> By Pass Issues </p>
+                    <p class="summary-sub-group count"><span><i class="yellow-dot mr-3 fas fa-adjust"></i></span> 3</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Dirt/Vegetation </p>
+                    <p class="summary-sub-group count"><span><i class="blue-dot mr-3 fas fa-adjust"></i></span> 4373</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Broken Glass</p>
+                    <p class="summary-sub-group count"><span><i class="red-dot mr-3 fas fa-adjust"></i></span> 151</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Others </p>
+                    <p class="summary-sub-group count"><span><i class="green-dot mr-3 fas fa-adjust"></i></span> 770 </p>
+                </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="d-flex justify-content-between">
+                <h1 class="summary-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Short Circuit</h1>
+                <h1 class="summary-group count"><span><i class="blue-dot mr-3  fas fa-adjust"></i></span> 8</h1>
+            </div>
+            <hr class="hr-line" />
+            <div class="d-flex justify-content-between">
+                <h1 class="summary-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Open Circuit</h1>
+                <h1 class="summary-group count"><span><i class="green-dot  mr-3  fas fa-adjust"></i></span> 474</h1>
+            </div>
+            <hr class="hr-line" />
+            <div>
+                <div class="d-flex justify-content-between">
+                    <h1 class="summary-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Panel Failure</h1>
+                    <h1 class="summary-group count"><span><i class="mr-3  fas fa-adjust"></i></span> 136</h1>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> Module </p>
+                    <p class="summary-sub-group count"><span><i class="red-dot mr-3 fas fa-adjust"></i></span> 89</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="summary-sub-group "><span><i class=" mr-3 fas fa-info-circle"></i> </span> Table </p>
+                    <p class="summary-sub-group count"><span><i class="orange-dot mr-3 fas fa-adjust"></i></span> 47</p>
+                </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="d-flex justify-content-between">
+                <h1 class="summary-group"><span><i class="mr-3 fas fa-info-circle"></i> </span> PID</h1>
+                <h1 class="summary-group count"><span><i class="yellow-dot mr-3  fas fa-adjust"></i></span> 14</h1>
+            </div>
+            <hr class="hr-line" />
+        </div>
+    </div>
+
+    <div class="p-3 d-none graphs-bg-container" id="graphContainer">
+        <div class="p-2 mb-3 shadow">
+            <h1 class="graphs-main-heading">Analytical Maps</h1>
+        </div>
+        <div class="d-flex flex-wrap mb-5">
+            <button class="p-3 shadow button " id="powerLessMetricBtn">
+                Power Loss Metrics
+            </button>
+            <button class="p-3 button selected-button shadow" id="AnamolyClassificationBtn">
+                Anamoly Classification
+            </button>
+            <button class="p-3 button shadow" id="invertorBtn">
+                Inverter-wise Analysis
+            </button>
+            <button class="p-3 button shadow" id="healthBtn">
+                Health History
+            </button>
+        </div>
+        <div>
+            <div class="d-none " id="powerLessMetricContainer">
+                <div class="shadow m-auto chart-container">
+                    <h1 class="shadow chart-heading p-2">Power Loss Metrics</h1>
+                    <canvas id="myPowerChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <div class="charts-container" id="AnamolyClassificationContainer">
+                <div class="chart p-2 m-3 shadow">
+                    <h1 class="shadow p-2 chart-heading">Anamoly Classification</h1>
+                    <canvas id="myBarChart" width="400" height="400"></canvas>
+                </div>
+                <div class="chart p-2 m-3 shadow">
+                    <h1 class="shadow p-2 chart-heading">Anamoly Classification</h1>
+                    <canvas id="myHorizontalBarChart" width="400" height="400"></canvas>
+                </div>
+                <div class="chart p-2 m-3 shadow">
+                    <h1 class="shadow p-2 chart-heading">Anamoly Classification</h1>
+                    <canvas id="myPieChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <div class="d-none" id="invertorContainer">
+                <div class="shadow  m-auto  chart-container p-2">
+                    <h1 class="shadow chart-heading p-2">Inverter Wise Analysis</h1>
+                    <canvas id="myInvertorChart" width="400" height="400"></canvas>
+                </div>
+
+            </div>
+            <div class="d-none " id="healthContainer">
+                <div class="shadow  m-auto  chart-container p-2 ">
+                    <h1 class="shadow chart-heading p-2">Health history</h1>
+                    <canvas id="myHealthChart" width="400" height="400"></canvas>
+                </div>
+
+            </div>
+
+            <script>
+                var ctx = document.getElementById('myBarChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['PID', 'PanelFailure', 'OpenCircuit', 'ShortCircuit', 'Hotspots', ],
+                        datasets: [{
+                            label: 'Anamoly Classification',
+                            data: [10, 30, 20, 50, 320],
+                            backgroundColor: "skyblue",
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+            <script>
+                var ctx = document.getElementById('myHorizontalBarChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['By Pass Diodes', 'Dirt/Vegetation', 'Multi-cell Hotspots', 'Cell Failure', ],
+                        datasets: [{
+                            Axis: "y",
+                            label: 'Anamoly Classification',
+                            data: [80, 160, 20, 100],
+                            fill: false,
+                            backgroundColor: ["blue", "green", "yellow", "red"],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                    }
+                });
+            </script>
+            <script>
+                var ctx = document.getElementById('myPieChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['PID', 'PanelFailure', 'OpenCircuit', 'ShortCircuit', 'Hotspots', ],
+                        datasets: [{
+                            label: 'Anamoly Classification',
+                            data: [10, 30, 20, 50, 320],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+
+            <script>
+                var ctx = document.getElementById('myPowerChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['PID', 'PanelFailure', 'OpenCircuit', 'ShortCircuit', 'Hotspots', ],
+                        datasets: [{
+                            label: 'Power Loss Metrics',
+                            data: [230, 120, 150, 80, 30],
+                            backgroundColor: "skyblue",
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+            <script>
+                var ctx = document.getElementById('myInvertorChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['PID', 'PanelFailure', 'OpenCircuit', 'ShortCircuit', 'Hotspots', ],
+                        datasets: [{
+                            label: 'Inverter-wise Analysis',
+                            data: [100, 80, 40, 140, 30],
+                            backgroundColor: "grey",
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+            <script>
+                var ctx = document.getElementById('myHealthChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['PID', 'PanelFailure', 'OpenCircuit', 'ShortCircuit', 'Hotspots', ],
+                        datasets: [{
+                            label: 'Health history',
+                            data: [10, 30, 20, 50, 20],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

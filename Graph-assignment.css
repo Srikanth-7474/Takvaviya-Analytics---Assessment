@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.heading {
+    font-family: "Roboto";
+}
+
+.summary-continer {
+    width: 90%;
+    align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+    .summary-continer {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .summary-continer {
+        width: 22%;
+    }
+}
+
+.summary-group {
+    font-size: 16px;
+}
+
+.summary-sub-group {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 576px) {
+    .summary-group {
+        font-size: 18px;
+    }
+
+    .summary-sub-group {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .summary-group {
+        font-size: 24px;
+    }
+
+    .summary-sub-group {
+        font-size: 20px;
+    }
+}
+
+.hr-line {
+    background-color: black;
+}
+
+.graphs-bg-container {
+    background-image: url('https://img.freepik.com/free-vector/3d-perspective-style-diamond-shape-white-background_1017-27556.jpg?size=626&ext=jpg');
+    background-size: cover;
+}
+
+.graphs-main-heading {
+    font-family: "Roboto";
+    font-size: 24px;
+}
+
+.button {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.selected-button {
+    background-color: black;
+    color: #ffffff;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chart {
+    width: 90%;
+}
+
+@media screen and (min-width: 576px) {
+    .chart {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .chart {
+        width: 25%;
+    }
+}
+
+
+.chart-container {
+    width: 90%;
+
+}
+
+@media screen and (min-width: 576px) {
+    .chart-container {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .chart-container {
+        width: 25%;
+    }
+}
+
+.yellow-dot {
+    color: yellow;
+}
+
+.blue-dot {
+    color: blue;
+}
+
+.red-dot {
+    color: red;
+}
+
+.green-dot {
+    color: green;
+}
+
+.orange-dot {
+    color: orange;
+}
+
+.chart-heading {
+    font-size: 20px;
+    font-family: "Roboto";
+}
